@@ -20,7 +20,7 @@ public class PersonController {
     public PersonController(PersonRepository personRepository) {
         this.personRepository = personRepository;
     }
-    @GetMapping("/persons/{id}")
+    @GetMapping("/persons/{country}")
     public ResponseEntity<List<Person>> findPersonByCountry(@PathVariable("country") String country)
     {
         return ResponseEntity.ok(personRepository.findByCountry(country));
